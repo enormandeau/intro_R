@@ -1,0 +1,4 @@
+*.doc
+*~
+.~lock*
+99_messages/*
