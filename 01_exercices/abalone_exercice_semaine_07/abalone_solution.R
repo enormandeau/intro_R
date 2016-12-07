@@ -14,7 +14,7 @@ print(str(abalone))
 print(head(abalone))
 
 # Plot infos about interesting variables ####
-#plot(abalone[, c("ShuckedWeight", "Length", "Diameter", "Height", "WholeWeight")])
+plot(abalone[1:200, c("ShuckedWeight", "Length", "Diameter", "Height", "WholeWeight")])
 
 # Create linear model ####
 # Try to explain the Shucked Weight (weight of the part that is eaten) with
@@ -27,4 +27,6 @@ print(summary(model))
 
 # Visualize prediction ####
 plot(predict(model, data=abalone), abalone$ShuckedWeight, pch=19, col="#00000022", ylim=c(0, 1.5), xlim=c(0, 1.5))
+
+# Add 1:1 line
 abline(0, 1, col="red")
